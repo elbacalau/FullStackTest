@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "FjMra03deTaRBRDgb35dqzSblY+gfj47l2lVGTvnbNI=",
+  "Source": "Prueba1.Server",
+  "BasePath": "_content/Prueba1.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Drify\\Desktop\\Programacio\\FullStack\\Prueba1\\prueba1.client\\prueba1.client.esproj",
+      "Version": 2,
+      "Source": "prueba1.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,80 @@
+﻿<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!forecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="forecasts">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Temp. (C)</th>
+            <th>Temp. (F)</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let forecast of forecasts">
+            <td>{{ forecast.date }}</td>
+            <td>{{ forecast.temperatureC }}</td>
+            <td>{{ forecast.temperatureF }}</td>
+            <td>{{ forecast.summary }}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<br>
+
+<h1>Esto es una prueba de proyecto Full Stack</h1>
+<ul>
+    <li *ngFor="let producto of productos">
+        {{ producto.nombre }} {{ producto.precio | currency }}
+    </li>
+</ul>
+
+<hr>
+<br><br>
+
+<!-- PRUEBA DE BUSCAR PRODUCTOS -->
+
+<h1>Prueba de Buscar productos al modelo.</h1>
+
+<div class="container">
+    <input class="input" type="text" [(ngModel)]="nombreProducto" placeholder="Nombre producto">
+    <button class="btn" (click)="getProduct(nombreProducto)">Buscar Producto</button>
+
+    <div *ngIf="productoEncontrado">
+        <h2>{{ productoEncontrado.nombre }}</h2>
+        <h2>{{ productoEncontrado.precio | currency }}</h2>
+    </div>
+
+    <div class="error" *ngIf="error">
+        <p>{{ error }}</p>
+    </div>
+</div>
+
+<hr>
+
+<br>
+<!-- PRUEBA DE ACERTAR PALABRAS -->
+<div class="container2">
+  <h1>Prueba de acertar palabra</h1>
+  <p>Intentos: {{ attempts }}</p>
+  <p>Palabra: {{ palabraMostrada }}</p>
+
+  <div *ngIf="error" style="color: red;">
+    {{ error2 }}
+  </div>
+
+  <div *ngIf="errorValidacion" style="color: red;">
+    {{ errorValidacion }}
+  </div>
+
+
+  <div *ngIf="palabraMostrada === palabraAcertar" style="color: green;">
+    {{ msgwin }}
+  </div>
+
+  <input type="text" [(ngModel)]="letra" placeholder="Ingresa una letra">
+  <button (click)="getChar()">Adivinar</button>
+</div>
