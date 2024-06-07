@@ -1,5 +1,32 @@
 <div class="container">
   <h1>Prueba de uso <span style="color: rgb(111, 100, 158);">'POST'</span></h1>
 
+  <form [formGroup]="libroForm" (ngSubmit)="agregarLibro()">
+    <div class="form-group">
+      <label for="titulo">Título</label>
+      <input id="titulo" formControlName="titulo" class="form-control" type="text" />
+      <div *ngIf="libroForm.get('titulo')?.invalid && libroForm.get('titulo')?.touched" class="text-danger">
+        El título es requerido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="autor">Autor</label>
+      <input id="autor" formControlName="autor" class="form-control" type="text" />
+      <div *ngIf="libroForm.get('autor')?.invalid && libroForm.get('autor')?.touched" class="text-danger">
+        El autor es requerido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dataPublicacion">Fecha de Publicación</label>
+      <input id="dataPublicacion" formControlName="dataPublicacion" class="form-control" type="number" />
+      <div *ngIf="libroForm.get('dataPublicacion')?.invalid && libroForm.get('dataPublicacion')?.touched" class="text-danger">
+        La fecha de publicación es requerida y debe estar entre 1000 y {{ curerntYear }}.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="libroForm.invalid">Agregar Libro</button>
+  </form>
 
 </div>
