@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule, FormGroup, Validator, FormControl, Validators } from '@angular/forms';
 import { Libro } from '../libros/libros.component';
 import { LibrosFormularioService } from './libros-formulario.service';
+import { CurrencyPipe } from '@angular/common';
 
 
 @Component({
@@ -12,14 +13,19 @@ import { LibrosFormularioService } from './libros-formulario.service';
 })
 export class LibrosFormularioComponent{
 
+  curerntYear: number = new Date().getFullYear();
   libroForm = new FormGroup({
     titulo: new FormControl('', Validators.required),
     autor: new FormControl('', Validators.required),
-    dataPublicacion: new FormControl('', [Validators.required, Validators.min(1000), Validators.max(new Date().getFullYear())])
+    dataPublicacion: new FormControl('', [
+      Validators.required,
+      Validators.min(1000),
+      Validators.max(this.curerntYear)])
 });
 
 
   constructor( private libroService: LibrosFormularioService ) {}
+
 
   agregarLibro() {
     if (this.libroForm.valid) {
