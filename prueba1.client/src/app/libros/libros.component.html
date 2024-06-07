@@ -6,26 +6,11 @@
     <button (click)="buscarLibro()" type="button">Buscar Libro</button>
 
     <div *ngIf="libroEncontrado">
-      <p class="msgwin">Libro encontrado con la ID: {{ libroEncontrado.id }}</p>
+      <p class="msg-win">Libro encontrado con la ID: {{ libroEncontrado.id }}</p>
     </div>
     <div *ngIf="libroNoEncontrado">
       <p style="color: red; font-weight: bolder;">{{ libroNoEncontrado }}</p>
     </div>
-
-
-
-
-    <!--
-    <div *ngIf="libros.length > 0">
-      <div *ngFor="let libro of libros">
-        <div *ngIf="terminoBusqueda === libro.titulo">
-          <h4>Autor: <span style="color: rgb(111, 150, 111);">{{ libro.autor }}</span></h4>
-        </div>
-      </div>
-    </div>
-    -->
-
-
-
   </div>
 </div>
+<hr>
