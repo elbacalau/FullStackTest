@@ -19,6 +19,21 @@ table {
     justify-items: center;
 }
 
+.container p {
+  font-size: 23px;
+}
+
+.p1 {
+  color: rgb(101, 255, 180);
+  letter-spacing: 2px;
+}
+
+.msg-win {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
 .container input {
     padding: 10px;
     border-radius: 10px;

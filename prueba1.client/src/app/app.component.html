@@ -55,26 +55,23 @@
 
 <hr>
 
-<br>
+
 <!-- PRUEBA DE ACERTAR PALABRAS -->
-<div class="container2">
+
+
+<div class="container">
   <h1>Prueba de acertar palabra</h1>
   <p>Intentos: {{ attempts }}</p>
-  <p>Palabra: {{ palabraMostrada }}</p>
+  <p>Palabra: <span class="p1">{{ palabraMostrada }} </span></p>
 
-  <div *ngIf="error" style="color: red;">
-    {{ error2 }}
-  </div>
+  <div *ngIf="error2" style="color: red;"> {{ error2 }} </div>
+  <div *ngIf="errorValidacion" style="color: red;"> {{ errorValidacion }} </div>
 
-  <div *ngIf="errorValidacion" style="color: red;">
-    {{ errorValidacion }}
-  </div>
+  <div class="msg-win" *ngIf="msgwin" style="color: green;"> {{ msgwin }} </div>
 
-
-  <div *ngIf="palabraMostrada === palabraAcertar" style="color: green;">
-    {{ msgwin }}
-  </div>
-
-  <input type="text" [(ngModel)]="letra" placeholder="Ingresa una letra">
-  <button (click)="getChar()">Adivinar</button>
+  <input required type="text" [(ngModel)]="letra" placeholder="Ingresa una letra">
+  <button [disabled]="isDisabled()" (click)="getChar()">Adivinar</button>
+  <p style="color: red;" *ngIf="mostrarMensajeError">{{ msgLimiteAtt }}</p>
 </div>
+<hr>
+
