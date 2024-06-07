@@ -33,3 +33,4 @@ C:\Users\Drify\Desktop\Programacio\FullStack\Prueba1\Prueba1.Server\obj\Debug\ne
 C:\Users\Drify\Desktop\Programacio\FullStack\Prueba1\Prueba1.Server\obj\Debug\net8.0\Prueba1.Server.pdb
 C:\Users\Drify\Desktop\Programacio\FullStack\Prueba1\Prueba1.Server\obj\Debug\net8.0\Prueba1.Server.genruntimeconfig.cache
 C:\Users\Drify\Desktop\Programacio\FullStack\Prueba1\Prueba1.Server\obj\Debug\net8.0\ref\Prueba1.Server.dll
+C:\Users\Drify\Desktop\Programacio\FullStack\Prueba1\Prueba1.Server\obj\Debug\net8.0\Prueba1.Server.sourcelink.json
