@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { LibrosComponent } from './libros/libros.component';
 import { LibrosFormularioComponent } from './libros-formulario/libros-formulario.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { LibrosFormularioComponent } from './libros-formulario/libros-formulario
 
   ],
   imports: [
-    BrowserModule, HttpClientModule, FormsModule
+    BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
